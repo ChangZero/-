@@ -1,9 +1,11 @@
 import sys
-num = sys.stdin.readline()
-list = []
-for i in num:
-    list.append(i)
-    
-list.sort(reverse= True)
-ans = ",".join(list)
-print(''.join(list))
+input = sys.stdin.readline
+array = []
+n = int(input())
+for i in range(n):
+    [a,b] = map(int,input().split())
+    array.append([a,b])
+s_array = sorted(array)
+
+for i in range(n):
+    print(s_array[i][0], s_array[i][1])
